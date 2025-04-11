@@ -1,0 +1,116 @@
+/* ----------- BODY & MAIN ----------- */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+main {
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    background-image: url("/public/images/route_livraison.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    flex: 1;
+  }
+  
+  /* === Présentation === */
+  #présentation {
+    color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #présentation h1 {
+    font-size: 2.2rem;
+    color: #ff6b00; /* Orange dynamique */
+    margin-bottom: 1rem;
+  }
+  
+  #présentation video {
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  #présentation p {
+    background-color: rgba(255, 255, 255, 0.5);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  /* === Services === */
+  #services {
+    border-left: 6px solid #0077cc; /* Bleu professionnel */
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  
+  #services h1 {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 2rem;
+    color: #0077cc;
+    margin-bottom: 1.5rem;
+  }
+  
+  #services ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #services li {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 4px solid #ff6b00;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  #services li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(4px);
+    cursor: pointer;
+  }
+
+/* --- FADE IN lent pour le paragraphe --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.8s ease-out, transform 1.8s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* --- SLIDE IN pour les <li> plus lentement + rebond doux --- */
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 1.5s ease-out;
+  }
+  
+  .slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
