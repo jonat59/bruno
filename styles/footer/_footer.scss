@@ -1,64 +1,50 @@
 /* ----------- FOOTER ----------- */
 footer {
-    margin-top: auto;
-    background: linear-gradient(135deg, #007bff, #ff8c00);
-    padding: 10px 0;
-  }
-  
-  #grid {
+  background: linear-gradient(135deg, #007bff, #ff8c00);
+  padding: 4px 0;
+  & #grid {
+    padding: 10px 3rem;
     display: grid;
-    grid-template-areas:
-      "a b c"
-      "d d d";
+    grid-template-areas: "a b b" "d d d";
     grid-template-columns: 1fr 3fr 1fr;
-    gap: 10px;
-    padding: 10px;
   }
-  
-  #logo {
+  & #logo-foot {
     grid-area: a;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    max-width: 150px;
+    width: 60%;
   }
-  
-  #logo img {
-    max-height: 60px;
-    height: auto;
-    width: auto;
+  & #logo-foot img {
+    height: 100px;
   }
-  
-  nav#nav ul {
+  & nav#nav-foot {
     grid-area: b;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: fantasy;
-    font-size: medium;
-    list-style: none;
-  }
-  
-  #Réseaux {
-    grid-area: c;
-    display: flex;
-    flex-direction: column;
     align-items: stretch;
-    gap: 10px;
+    & ul {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      justify-content: space-around;
+      font-family: fantasy;
+      font-size: large;
+      color: #000;
+      align-items: center;
+    }
+    & a {
+      text-decoration: none;
+    }
   }
-  
-  #Réseaux a {
-    font-size: 1.4rem;
-    text-decoration: none;
-  }
-  
-  #Copyright {
+  & #Copyright {
     grid-area: d;
-    font-size: 0.85rem;
     display: flex;
     justify-content: center;
+    flex-direction: row;
     gap: 1rem;
+    padding: 0.5rem;
   }
-  
+}
   /* ----------- BOUTON BACK TO TOP ----------- */
   .back-to-top {
     position: fixed;
@@ -117,24 +103,52 @@ footer {
   
       /* ----------- MEDIA QUERIES ----------- */
       @media (max-width: 768px) {
-        #grid {
+        footer {
+          background: linear-gradient(135deg, #007bff, #ff8c00);
+          padding: 4px 0;
+          padding-bottom: 80px;
+          & #grid {
+            padding: 10px 3rem;
+            display: grid;
             grid-template-areas:
-              "a a a"
-              "b b b"
-              "c c c"
-              "d d d";
+    "a a a"
+    "b b b"
+    "c c c"
+    "d d d";
             grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
           }
-        
-          #Réseaux {
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            width: 100%;
-          }
-        
-          #Copyright {
+          & #logo-foot {
+            grid-area: a;
+            display: flex;
             flex-direction: column;
+            max-width: 80px; // Réduit encore plus le logo
+            width: 100%;
+            align-items: center;
+          }
+          & nav#nav-foot {
+            & ul {
+              display: flex;
+              flex-direction: row;
+              height: 100%;
+              justify-content: space-around;
+              font-family: fantasy;
+              font-size: large;
+              color: #000;
+              align-items: center;
+            }
+          }
+          & #Copyright {
+            grid-area: d;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+          }
+          .back-to-top {
+            bottom: 80px;
           }
         }
+      }
+      
         

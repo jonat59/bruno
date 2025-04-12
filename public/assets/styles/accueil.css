@@ -90,7 +90,7 @@ main {
 
 /* ----------- BOUTONS DE LA SECTION ACCUEIL ----------- */
 .portfolio-experiment {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .portfolio-experiment a {
@@ -109,6 +109,7 @@ main {
   transform: translate3d(0, 0.7em, 0);
   display: block;
   transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  text-decoration: none;
 }
 
 .portfolio-experiment a:after {

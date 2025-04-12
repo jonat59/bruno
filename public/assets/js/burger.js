@@ -1,4 +1,3 @@
-console.log('ok');
 document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
   });
