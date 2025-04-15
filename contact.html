@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ABC Transport - Services de livraison, déménagement et nettoyage industriel. Demandez un devis en ligne !"
+    />
+    <title>ABC - Bruno Cliquennois - Auto Entrepreneur</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/public/assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/public/assets/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="/public/assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/public/assets/favicon/site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/assets/styles/style.css" />
+    <link rel="stylesheet" href="/public/assets/styles/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="logo">
+          <div>
+            <a href="/accueil.html">
+              <img
+                src="/public/images/Untitled.png"
+                alt="Logo du site ABC Transport"
+              />
+            </a>
+          </div>
+        </div>
+        <button
+          id="menu-toggle"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <span class="icon"><i class="fa-solid fa-burger"></i></span>
+        </button>
+        <div id="nav">
+          <ul>
+            <li>
+              <a href="/livraison.html"
+                ><i class="fa-solid fa-truck-ramp-box"></i> LIVRAISONS
+                ÉLECTROMÉNAGERS</a
+              >
+            </li>
+            <li>
+              <a href="/"
+                ><i class="fa-solid fa-boxes-stacked"></i> DÉMÉNAGEMENTS</a
+              >
+            </li>
+            <li>
+              <a href="/"
+                ><i class="fa-solid fa-hand-sparkles"></i> NETTOYAGES
+                INDUSTRIELS</a
+              >
+            </li>
+            <li>
+              <a href="/"
+                ><i class="fa-solid fa-parachute-box"></i> FOURNISSEURS ET
+                GROSSISTES</a
+              >
+            </li>
+            <li>
+              <a href="/"
+                ><i class="fa-solid fa-comments"></i> NOUS CONTACTER</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <script src="/public/assets/js/burger.js"></script>
+    </header>
+    <main>
+      <section class="business-card">
+        <div class="logo-and-photo">
+          <img src="/public/images/logo_abc.jpg" alt="Logo ABC" class="logo" />
+          <img src="bruno.jpg" alt="Bruno Cliquennois" class="photo" />
+        </div>
+        <h1>Bruno Cliquennois</h1>
+        <p class="subtitle">Auto-entrepreneur - ABC Services</p>
+
+        <div class="services">
+          <h2>Services proposés</h2>
+          <ul>
+            <li><i class="fas fa-truck"></i> -Livraisons-</li>
+            <li><i class="fas fa-box-open"></i> -Déménagements-</li>
+            <li><i class="fas fa-broom"></i> -Débarras maisons / bâtiments-</li>
+            <li><i class="fas fa-industry"></i> -Nettoyages industriels-</li>
+            <li>
+              <i class="fas fa-store"></i> -Expositions sur foires & marchés-
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-info">
+          <h2>Contact</h2>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 12 Rue des Entrepreneurs,
+            75000 Paris
+          </p>
+          <p><i class="fas fa-phone"></i> 06 12 34 56 78</p>
+          <p><i class="fas fa-envelope"></i> bruno.abc@gmail.com</p>
+          <p>
+            <i class="fab fa-facebook"></i>
+            <a href="https://facebook.com/abcservices" target="_blank"
+              >Page Facebook</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-form">
+        <h2>Contactez-moi</h2>
+
+        <form id="form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom *</label>
+              <input type="text" id="nom" name="nom" required />
+              <span class="error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="prenom">Prénom *</label>
+              <input type="text" id="prenom" name="prenom" required />
+              <span class="error"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telephone">Téléphone *</label>
+              <input type="tel" id="telephone" name="telephone" required />
+              <span class="error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+              <span class="error"></span>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="error"></span>
+          </div>
+
+          <!-- CAPTCHA simple -->
+          <div class="form-group full">
+            <label id="captcha-label"></label>
+            <input type="text" id="captcha" required />
+            <span class="error"></span>
+          </div>
+
+          <button type="submit" class="submit-btn">Envoyer</button>
+
+          <!-- Confirmation animée -->
+          <div class="confirmation" id="confirmation">
+            ✅ Message envoyé avec succès !
+          </div>
+        </form>
+      </section>
+
+      <script src="/public/assets/js/contact.js"></script>
+    </main>
+    <footer>
+      <div id="grid">
+        <div id="logo-foot">
+          <a href="accueil.html">
+            <img src="/public/images/logo_abc.jpg" alt="logo entreprise" />
+          </a>
+        </div>
+        <nav id="nav-foot">
+          <ul>
+            <li><a href="/">Mentions Légales</a></li>
+            <li><a href="/">Politiques de confidentialité</a></li>
+            <li><a href="/contact.html">À Propos</a></li>
+          </ul>
+        </nav>
+
+        <div id="Copyright">
+          <span>&copy; 2025 - Tous droits réservés - Property of ABC</span>
+        </div>
+      
+      <!-- Bouton de retour en haut -->
+      <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Retour en haut de la page"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 4.5l-8 8 1.5 1.5 5.5-5.5v11h2v-11l5.5 5.5 1.5-1.5z" />
+        </svg>
+      </button>
+      <script src="/public/assets/js/scroll-to-top.js"></script>
+      <script src="/public/assets/js/slide-and-fade-in.js"></script>
+    </footer>
+</div>
+  </body>
+</html>

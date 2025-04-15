@@ -1,32 +1,31 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const backToTopButton = document.getElementById('backToTop');
-  
-  // Apparition du bouton après un certain défilement
-  window.addEventListener('scroll', function() {
-      // Apparaît après 300px de défilement
-      if (window.scrollY > 100) {
-          backToTopButton.classList.add('visible');
-          
-          // Animation supplémentaire quand on défile très bas (facultatif)
-          if (window.scrollY > 700) {
-              backToTopButton.classList.add('pulse');
-          } else {
-              backToTopButton.classList.remove('pulse');
-          }
+document.addEventListener("DOMContentLoaded", function () {
+  //script exécuté quand page prête pour éviter d’interagir avec des éléments encore non chargés
+  const backToTopButton = document.getElementById("backToTop");
+  //selection du bouton backToTop
+
+  window.addEventListener("scroll", function () {
+    //verification a chaque scroll
+    if (window.scrollY > 100) {
+      backToTopButton.classList.add("visible"); //bouton visible a partir de 100px
+
+      if (window.scrollY > 700) {
+        backToTopButton.classList.add("pulse"); //pulsation du bouton a partir de 700px
       } else {
-          backToTopButton.classList.remove('visible');
-          backToTopButton.classList.remove('pulse');
+        backToTopButton.classList.remove("pulse"); //si on remonte on enleve pulsation
       }
+    } else {
+      backToTopButton.classList.remove("visible"); //si moins de 100 px on enleve le bouton
+      backToTopButton.classList.remove("pulse"); // et le pulse
+    }
   });
-  
-  // Fonction de retour en haut avec animation douce
-  backToTopButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      // Animation douce pour remonter
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-      });
+
+  backToTopButton.addEventListener("click", function (e) {
+    //quand on clique sur le bouton
+    e.preventDefault(); //empeche le comportement du lien par défaut
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    }); // et on fait défiler la page en douceur vers le haut
   });
 });

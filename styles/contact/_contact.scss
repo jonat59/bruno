@@ -1,0 +1,256 @@
+:root {
+  --primary: #0077cc;
+  --accent: #ff6600;
+  --bg: #f4f7fa;
+  --text: #222;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --font: "Segoe UI", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* toute la hauteur */
+}
+
+main {
+  flex: 1; /* prend tout l’espace restant */
+  background-image: url(/public/images/contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 2rem; /* éviter que le contenu touche le footer */
+}
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.business-card {
+  background: rgba(0, 119, 204, 0.5);
+  border-radius: var(--radius);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.logo-and-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 80px;
+}
+
+.photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+}
+
+.subtitle {
+  color: var(--accent);
+  font-weight: bold;
+  margin-top: 0.2rem;
+}
+
+.services,
+.contact-info {
+  border-radius: 10px;
+  text-align: left;
+  margin-top: 2rem;
+}
+h2 {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+  justify-content: center;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.services i {
+  color: var(--accent);
+}
+.contact-info p {
+  font-size: 1.1rem;
+}
+.contact-info i {
+  color: var(--accent);
+  margin-right: 0.5rem;
+}
+
+.contact-info a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Formulaire */
+.contact-form {
+  background-color: rgba(0, 119, 204, 0.5);
+  border-radius: 12px;
+  padding: 2.5rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  width: 100%;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+input,
+textarea {
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition:
+    border 0.3s,
+    box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+  outline: none;
+}
+
+.submit-btn {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: block;
+  margin: 1rem auto 0 auto; /* centre uniquement ce bouton */
+}
+
+.submit-btn:hover {
+  background: #e65c00;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  display: none;
+}
+
+.invalid {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Message de confirmation */
+.confirmation {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #e0ffe0;
+  color: #006600;
+  font-weight: bold;
+  border: 1px solid #00aa00;
+  border-radius: 8px;
+  display: none;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
