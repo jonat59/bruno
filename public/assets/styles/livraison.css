@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/* ----------- BODY & MAIN ----------- */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+main {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  background-image: url("/public/images/route_livraison.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  flex: 1;
+}
+
+/* === Présentation === */
+#présentation {
+  color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#présentation h1 {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 2.2rem;
+  font: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ff6b00; /* Orange dynamique */
+  margin-bottom: 1rem;
+}
+
+#présentation video {
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#présentation p {
+  background-color: rgba(255, 255, 255, 0.5);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* === Services === */
+#services {
+  border-left: 6px solid #0077cc; /* Bleu professionnel */
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+#services h1 {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 2rem;
+  color: #0077cc;
+  margin-bottom: 1.5rem;
+}
+
+#services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#services li {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 4px solid #ff6b00;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#services li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(4px);
+  cursor: pointer;
+}
+
+/* --- FADE IN lent pour le paragraphe --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.8s ease-out, transform 1.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- SLIDE IN pour les <li> plus lentement + rebond doux --- */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 1.5s ease-out;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- Bouton Nous contacter --- */
+/* From Uiverse.io by 0x-Sarthak */
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 11.5px 18px;
+  transition: all 0.2s ease;
+  border: 3px solid #552da8;
+  border-radius: 50px;
+  background: #552da8;
+  cursor: pointer;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  border-radius: 50px;
+  background: white;
+  width: 45px;
+  height: 45px;
+  transition: all 0.8s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: Montserrat;
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: white;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.5s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #1c1c1c;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+  transition: all 2s ease;
+}
+
+.cta:active {
+  transform: scale(0.95);
+  transition: all 2s ease;
+}/*# sourceMappingURL=livraison.css.map */
